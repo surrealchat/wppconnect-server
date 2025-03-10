@@ -1,0 +1,173 @@
+[
+  {
+    "id": {
+      "server": "c.us",
+      "user": "4915170097089",
+      "_serialized": "4915170097089@c.us"
+    },
+    "pendingMsgs": false,
+    "lastReceivedKey": {
+      "fromMe": true,
+      "remote": {
+        "server": "c.us",
+        "user": "4915170097089",
+        "_serialized": "4915170097089@c.us"
+      },
+      "id": "3A5B6E26843AF09D1F26",
+      "_serialized": "true_4915170097089@c.us_3A5B6E26843AF09D1F26"
+    },
+    "t": 1741468199,
+    "unreadCount": -1,
+    "unreadDividerOffset": 0,
+    "archive": false,
+    "isReadOnly": false,
+    "isLocked": false,
+    "muteExpiration": 0,
+    "isAutoMuted": false,
+    "notSpam": true,
+    "ephemeralDuration": 0,
+    "ephemeralSettingTimestamp": 0,
+    "disappearingModeInitiator": "chat",
+    "disappearingModeTrigger": "chat_settings",
+    "disappearingModeInitiatedByMe": false,
+    "unreadMentionCount": 0,
+    "hasUnreadMention": false,
+    "archiveAtMentionViewedInDrawer": false,
+    "hasChatBeenOpened": false,
+    "tcToken": null,
+    "tcTokenTimestamp": null,
+    "tcTokenSenderTimestamp": 1741429764,
+    "endOfHistoryTransferType": 1,
+    "pendingInitialLoading": false,
+    "celebrationAnimationLastPlayed": 0,
+    "hasRequestedWelcomeMsg": false,
+    "msgs": null,
+    "isGroup": false,
+    "isUser": true,
+    "contact": {
+      "id": {
+        "server": "c.us",
+        "user": "4915170097089",
+        "_serialized": "4915170097089@c.us"
+      },
+      "name": "Konstantin Neureither",
+      "shortName": "Konstantin",
+      "pushname": "Konstantin",
+      "type": "in",
+      "isContactSyncCompleted": 1,
+      "textStatusLastUpdateTime": -1,
+      "syncToAddressbook": true,
+      "formattedName": "Konstantin Neureither",
+      "isMe": false,
+      "isMyContact": true,
+      "isPSA": false,
+      "isUser": true,
+      "isWAContact": true,
+      "profilePicThumbObj": {
+        "eurl": null,
+        "id": {
+          "server": "c.us",
+          "user": "4915170097089",
+          "_serialized": "4915170097089@c.us"
+        },
+        "tag": null
+      },
+      "msgs": null
+    },
+    "groupMetadata": null,
+    "presence": {
+      "id": {
+        "server": "c.us",
+        "user": "4915170097089",
+        "_serialized": "4915170097089@c.us"
+      },
+      "chatstates": []
+    }
+  },
+  {
+    "id": {
+      "server": "c.us",
+      "user": "491605740074",
+      "_serialized": "491605740074@c.us"
+    },
+    "pendingMsgs": false,
+    "lastReceivedKey": {
+      "fromMe": true,
+      "remote": {
+        "server": "c.us",
+        "user": "491605740074",
+        "_serialized": "491605740074@c.us"
+      },
+      "id": "3A772C9B6BF5B637A23B",
+      "_serialized": "true_491605740074@c.us_3A772C9B6BF5B637A23B"
+    },
+    "t": 1741429801,
+    "unreadCount": -1,
+    "unreadDividerOffset": 0,
+    "archive": false,
+    "isReadOnly": false,
+    "isLocked": false,
+    "muteExpiration": 0,
+    "isAutoMuted": false,
+    "notSpam": true,
+    "ephemeralDuration": 0,
+    "ephemeralSettingTimestamp": 0,
+    "disappearingModeInitiator": "chat",
+    "disappearingModeTrigger": "chat_settings",
+    "disappearingModeInitiatedByMe": false,
+    "unreadMentionCount": 0,
+    "hasUnreadMention": false,
+    "archiveAtMentionViewedInDrawer": false,
+    "hasChatBeenOpened": false,
+    "tcToken": null,
+    "tcTokenTimestamp": null,
+    "tcTokenSenderTimestamp": 1741429801,
+    "endOfHistoryTransferType": 1,
+    "pendingInitialLoading": false,
+    "celebrationAnimationLastPlayed": 0,
+    "hasRequestedWelcomeMsg": false,
+    "msgs": null,
+    "isGroup": false,
+    "isUser": true,
+    "contact": {
+      "id": {
+        "server": "c.us",
+        "user": "491605740074",
+        "_serialized": "491605740074@c.us"
+      },
+      "name": "Max Prokopp",
+      "shortName": "Max",
+      "type": "in",
+      "isContactSyncCompleted": 1,
+      "textStatusLastUpdateTime": -1,
+      "syncToAddressbook": true,
+      "formattedName": "Max Prokopp",
+      "isMe": false,
+      "isMyContact": true,
+      "isPSA": false,
+      "isUser": true,
+      "isWAContact": true,
+      "profilePicThumbObj": {
+        "eurl": "https://pps.whatsapp.net/v/t61.24694-24/382357452_674761491297843_6595890453114811174_n.jpg?ccb=11-4&oh=01_Q5AaIHHoKUGZD7Sv3T8wwmGWwiUJfrnz6kFcCDOB-8TsREnz&oe=67D9C7AD&_nc_sid=5e03e0&_nc_cat=104",
+        "id": {
+          "server": "c.us",
+          "user": "491605740074",
+          "_serialized": "491605740074@c.us"
+        },
+        "img": "https://media-muc2-1.cdn.whatsapp.net/v/t61.24694-24/382357452_674761491297843_6595890453114811174_n.jpg?stp=dst-jpg_s96x96_tt6&ccb=11-4&oh=01_Q5AaIJEuNSWiyKsSPLKUSqJd-DaqrqwIOhKZiUYLvzCvPH1W&oe=67D9C7AD&_nc_sid=5e03e0&_nc_cat=104",
+        "imgFull": "https://media-muc2-1.cdn.whatsapp.net/v/t61.24694-24/382357452_674761491297843_6595890453114811174_n.jpg?ccb=11-4&oh=01_Q5AaIHHoKUGZD7Sv3T8wwmGWwiUJfrnz6kFcCDOB-8TsREnz&oe=67D9C7AD&_nc_sid=5e03e0&_nc_cat=104",
+        "tag": "1698096413"
+      },
+      "msgs": null
+    },
+    "groupMetadata": null,
+    "presence": {
+      "id": {
+        "server": "c.us",
+        "user": "491605740074",
+        "_serialized": "491605740074@c.us"
+      },
+      "chatstates": []
+    }
+  }
+]
