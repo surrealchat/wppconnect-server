@@ -81,6 +81,10 @@ export default class CreateSessionUtil {
                   'WPPConnect-Server'
                 : undefined,
             catchLinkCode: (code: string) => {
+              console.log(
+                `[${session}] Phone number for authentication:`,
+                client.config.phone
+              );
               this.exportPhoneCode(req, client.config.phone, code, client, res);
             },
             catchQR: (
@@ -176,11 +180,11 @@ export default class CreateSessionUtil {
       session: client.session,
     });
 
-    callWebHook(client, req, 'phoneCode', {
-      phoneCode: phoneCode,
-      phone: phone,
-      session: client.session,
-    });
+    // callWebHook(client, req, 'phoneCode', {
+    //   phoneCode: phoneCode,
+    //   phone: phone,
+    //   session: client.session,
+    // });
 
     if (res && !res._headerSent)
       res.status(200).json({

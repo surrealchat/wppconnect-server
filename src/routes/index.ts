@@ -70,10 +70,20 @@ routes.get(
   verifyToken,
   SessionController.getQrCode
 );
+routes.get(
+  '/api/:session/phonecode-session',
+  verifyToken,
+  SessionController.getPhoneCode
+);
 routes.post(
   '/api/:session/start-session',
   verifyToken,
   SessionController.startSession
+);
+routes.post(
+  '/api/:session/start-session-phone',
+  verifyToken,
+  SessionController.startSessionWithPhone
 );
 routes.post(
   '/api/:session/logout-session',

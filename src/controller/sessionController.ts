@@ -227,6 +227,66 @@ export async function startSession(req: Request, res: Response): Promise<any> {
   await SessionUtil.opendata(req, session, waitQrCode ? res : null);
 }
 
+export async function startSessionWithPhone(
+  req: Request,
+  res: Response
+): Promise<any> {
+  /**
+   * #swagger.tags = ["Auth"]
+     #swagger.autoBody=false
+     #swagger.operationId = 'startSessionWithPhone'
+     #swagger.summary = 'Start a session using phone number authentication'
+     #swagger.description = 'Initialize a WhatsApp session using phone number authentication instead of QR code'
+     #swagger.security = [{
+            "bearerAuth": []
+     }]
+     #swagger.parameters["session"] = {
+      schema: 'NERDWHATS_AMERICA'
+     }
+     #swagger.requestBody = {
+      required: true,
+      "@content": {
+        "application/json": {
+          schema: {
+            type: "object",
+            properties: {
+              webhook: { type: "string" },
+              phone: { type: "string", description: "Phone number with country code (e.g. 5521999999999)" },
+            }
+          },
+          example: {
+            webhook: "",
+            phone: "5521999999999",
+          }
+        }
+      }
+     }
+   */
+  const session = req.session;
+  const { phone } = req.body;
+
+  if (!phone) {
+    return res.status(400).json({
+      status: 'error',
+      message: 'Phone number is required',
+    });
+  }
+
+  // Store the phone number in the client config
+  if (!clientsArray[session]) {
+    clientsArray[session] = { status: null };
+  }
+
+  if (!clientsArray[session].config) {
+    clientsArray[session].config = {};
+  }
+
+  clientsArray[session].config.phone = phone;
+
+  await getSessionState(req, res);
+  await SessionUtil.opendata(req, session, res);
+}
+
 export async function closeSession(req: Request, res: Response): Promise<any> {
   /**
    * #swagger.tags = ["Auth"]
@@ -557,6 +617,62 @@ export async function getQrCode(req: Request, res: Response) {
     res
       .status(500)
       .json({ status: 'error', message: 'Error retrieving QRCode', error: ex });
+  }
+}
+
+export async function getPhoneCode(req: Request, res: Response) {
+  /**
+   * #swagger.tags = ["Auth"]
+     #swagger.operationId = 'getPhoneCode'
+     #swagger.summary = 'Retrieve Phone Code'
+     #swagger.description = 'Get the 8-digit code for phone number authentication'
+     #swagger.security = [{
+            "bearerAuth": []
+     }]
+     #swagger.parameters["session"] = {
+      schema: 'NERDWHATS_AMERICA'
+     }
+   */
+  const session = req.session;
+  try {
+    if (clientsArray[session] != null) {
+      if (clientsArray[session]?.status === 'CONNECTED') {
+        return res.status(200).json({
+          status: 'isLogged',
+          phoneCode: null,
+        });
+      }
+      if (
+        clientsArray[session]?.status === 'PHONECODE' &&
+        clientsArray[session]?.phoneCode
+      ) {
+        return res.status(200).json({
+          status: 'phoneCode',
+          phone: clientsArray[session]?.phone,
+          phoneCode: clientsArray[session]?.phoneCode,
+          session: session,
+        });
+      } else {
+        return res.status(200).json({
+          status: clientsArray[session]?.status,
+          phoneCode: null,
+        });
+      }
+    } else {
+      return res.status(200).json({
+        status: 'notLogged',
+        phoneCode: null,
+        message:
+          'Session not started. Please, use the /start-session-phone route, for initialization your session',
+      });
+    }
+  } catch (ex) {
+    return res.status(200).json({
+      status: 'notLogged',
+      phoneCode: null,
+      message:
+        'Session not started. Please, use the /start-session-phone route, for initialization your session',
+    });
   }
 }
 
