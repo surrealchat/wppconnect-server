@@ -180,6 +180,7 @@ export default class CreateSessionUtil {
       session: client.session,
     });
 
+    // TODO: This webhook causes errors, therefore its removed for now.
     // callWebHook(client, req, 'phoneCode', {
     //   phoneCode: phoneCode,
     //   phone: phone,
